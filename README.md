@@ -8,7 +8,8 @@ Here is a repository listing every translated localizations for the game.
 - In `user.cfg` add a line with `g_language =` and after the `=` write the language folder you downloaded (ex: `g_language = french_(france)`)
 - Save, start the game and enjoy!
 
-⚠️ - Currently crashes the game when opening contract manager
+### Known issues (FR)
+- Ship names and brands got translated.
 
 
 More translations will come later.
