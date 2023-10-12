@@ -9,7 +9,7 @@ Here is a repository listing every translated localizations for the game.
 - Save, start the game and enjoy!
 
 ### Known issues (FR)
-- Ship names and brands got translated.
+- Letters with accents such as "é","à","ö" etc. either do not appear or they are smaller than what it should be due to a lack of support by the game.
 
 
 More translations will come later.
