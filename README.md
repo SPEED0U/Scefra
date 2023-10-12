@@ -1,5 +1,6 @@
 # StarCitizenTranslations
 Here is a repository listing every translated localizations for the game.
+The original translations are made with Google Translate API, there is things to corect.
 
 ### How to use ?
 - Download the repository files with the green "Code" button.
