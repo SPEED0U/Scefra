@@ -4,7 +4,7 @@ The original translations are made with Google Translate API, there is things to
 
 
 ### How to install (assisted) ?
-- Download the Powershell script by clicking [here](https://cdn.discordapp.com/attachments/953809384671150120/1162703368867807314/install_fr.ps1?ex=653ce6e5&is=652a71e5&hm=61a99a6ac656924b0af2003a712c114562a28211fa9ff0927c35464650cccaf4&).
+- Download the Powershell script by clicking [here](https://cdn.discordapp.com/attachments/954001140519944193/1162738174838177893/install_fr.ps1?ex=653d074f&is=652a924f&hm=6621ec2ce7dc815cf48313e38123b1e78377106273101c70576d631c18bde17f&).
 - Place the file `install_fr.ps1` in the folder `C:\PATH\TO\GAME\Robert Space Industries\StarCitizen`.
 - Execute the `install_fr.ps1` with `Powershell` either by double clicking it or by right clicking and selecting `Execute with Powershell`.
 - Follow the instructions.
