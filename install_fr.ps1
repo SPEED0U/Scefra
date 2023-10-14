@@ -17,7 +17,7 @@ function Show-Menu {
 function Create-Shortcut {
     # Crée un raccourci vers le script PowerShell sur le bureau
     $desktopPath = [System.Environment]::GetFolderPath('Desktop')
-    $shortcutFile = Join-Path $desktopPath "StarCitizenTranslation.ps1.lnk"
+    $shortcutFile = Join-Path $desktopPath "StarCitizen - Translation FR.ps1.lnk"
     $shell = New-Object -ComObject WScript.Shell
     $shortcut = $shell.CreateShortcut($shortcutFile)
     $shortcut.TargetPath = $MyInvocation.MyCommand.Path
