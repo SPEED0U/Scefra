@@ -157,7 +157,7 @@ while ($true) {
             Read-Host "Appuyez sur Entrée pour continuer..."
         }
         '6' {
-            break
+            exit
         }
         default {
             Clear-Host
