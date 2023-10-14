@@ -10,6 +10,8 @@ The original translations are made with Google Translate API, there is things to
 - Execute the `install_fr.ps1` with `Powershell` either by double clicking it or by right clicking and selecting `Execute with Powershell`.
 - Follow the instructions.
 
+⚠️ - You can re-execute the script in order to update the translation file.
+
 ### How to install (manual) ?
 - Download the repository files with the green "Code" button.
 - Extract the desired language in `C:\PATH\TO\GAME\Robert Space Industries\StarCitizen\LIVE\data\Localization`
