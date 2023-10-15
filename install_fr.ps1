@@ -56,7 +56,7 @@ function Create-Shortcut {
     $shortcutFile = Join-Path $desktopPath "StarCitizen - Translation FR.ps1.lnk"
     $shell = New-Object -ComObject WScript.Shell
     $shortcut = $shell.CreateShortcut($shortcutFile)
-    $shortcut.TargetPath = $MyInvocation.MyCommand.Path
+    $shortcut.TargetPath = $PSCommandPath
     $shortcut.WorkingDirectory = $ScriptDir  # Spécifiez le répertoire de travail ici
     $shortcut.Save()
     Write-Host "Raccourci créé sur le bureau : $shortcutFile"
@@ -157,7 +157,7 @@ while ($true) {
             Read-Host "Appuyez sur Entrée pour continuer..."
         }
         '6' {
-            break
+            exit
         }
         default {
             Clear-Host
