@@ -105,7 +105,7 @@ while ($true) {
         '2' {
             Clear-Host
             Write-Host "Traduction du PTU"
-            # Vérification de la présence du Live
+            # Vérification de la présence du PTU
             Write-Host "Vérification de la présence du PTU"
 
             if (-not (Test-Path -Path $localization2 -PathType Container)) {
@@ -115,6 +115,7 @@ while ($true) {
             else {
                 # Création du fichier user.cfg dans le ptu
                 Set-Content -Path "$localization2\user.cfg" -Value 'g_language = french_(france)'
+                Add-Content -Path "$localization1\user.cfg" -Value 'g_languageAudio = english'
 
                 # Création des répertoires nécessaires dans le ptu
                 Write-Host "Création des répertoires nécessaires dans le PTU"
