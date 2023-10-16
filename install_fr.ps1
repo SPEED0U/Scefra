@@ -83,6 +83,7 @@ while ($true) {
                 # Création du fichier user.cfg dans le live
                 Write-Host "Création du fichier user.cfg dans le live"
                 Set-Content -Path "$localization1\user.cfg" -Value 'g_language = french_(france)'
+                Add-Content -Path "$localization1\user.cfg" -Value 'g_languageAudio = english'
 
                 # Création des répertoires nécessaires dans le live"
                 Write-Host "Création des répertoires nécessaires dans le live"
