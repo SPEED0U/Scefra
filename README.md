@@ -24,7 +24,7 @@ La base de la traduction (Anglais vers Français) a été générée par l'API d
 
 ### Comment contribuer ?
 Vous pouvez contribuer à la correction de la traduction en vous inscrivant au site ci-dessous.
-- Lien: https://speedou.sc.tasul.fr/
+- Lien: https://tradsc.nightriderz.world/fr/scfr/
 
 ### Problèmes connus
 - Les lettres avec des accents comme "é","à","ö" etc. soit n'apparaissent pas ou elles sont affichées en minuscule.
