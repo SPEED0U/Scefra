@@ -8,7 +8,7 @@ La base de la traduction (Anglais vers Français) a été générée par l'API d
 
 
 ### Installation automatique
-> - Télécharger le script Powershell [ici](https://cdn.discordapp.com/attachments/954001140519944193/1164240728059301938/install_fr.ps1?ex=65427eac&is=653009ac&hm=1c19ee6fdf100f9e13fa9e0abcafad9c9c63ce6cad2f545f5b0887928f4e8a44&).
+> - Télécharger le script Powershell [ici](https://cdn.discordapp.com/attachments/954001140519944193/1164243159832870994/install_fr.ps1?ex=654280ef&is=65300bef&hm=d363981e3a164e0aa092f3db9adab6f9fd93d9a092bc8ca5a1f24dd37b0f1cb8&).
 > - Placer le fichier `install_fr.ps1` dans le dossier `C:\PATH\TO\GAME\Robert Space Industries\StarCitizen`.
 > - Exécuter le fichier `install_fr.ps1` avec  l'application Windows `Powershell` ou double-cliquez sur le fichier ou clique droit sur le fichier et sélectionnez `Exécuter avec Powershell`.
 > - Suivez les instructions sur l'écran du Powershell.
