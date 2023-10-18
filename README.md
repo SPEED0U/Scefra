@@ -21,6 +21,9 @@ La base de la traduction (Anglais vers Français) a été générée par l'API d
 > - Créer un fichier `user.cfg` (activé les extensions des fichiers dans les paramètres de Windows) dans le dossier `C:\PATH\TO\GAME\Robert Space Industries\StarCitizen\LIVE` si vous en avez pas déjà un.
 > - Dans le fichier `user.cfg` ajouter une ligne `g_language=` puis ajouter le language désiré après le `=`, exemple : `g_language=french_(france)`
 > - Enregistrer le fichier puis vous pourrez démarrer le jeu.
+>
+> ⚠️ - **Avec cette méthode il se peut que la traduction ne fonctionne pas, pour résoudre le soucis il faut réencoder le fichier `global.ini` en `UTF8 with BOM` avec un logiciel type Notepad++.**
+
 
 ### Comment contribuer ?
 Vous pouvez contribuer à la correction de la traduction en vous inscrivant au site ci-dessous.
