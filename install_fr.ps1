@@ -1,4 +1,6 @@
-﻿$ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+﻿set-executionpolicy unrestricted
+
+$ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 
 $localization1 = Join-Path $ScriptDir "LIVE"
 $localization2 = Join-Path $ScriptDir "PTU"
