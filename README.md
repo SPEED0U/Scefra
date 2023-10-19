@@ -2,6 +2,8 @@
 Ceci est un repository où vous pouvez trouver la traduction Française pour Star Citizen.
 La base de la traduction (Anglais vers Français) a été générée par l'API de Google Traduction et est corrigée par des contributeus.
 
+Lien de notre serveur Discord: https://discord.gg/c3CSTa7SAF
+
 **Table des matières :**
 1. [Installation automatique (RECOMMANDÉ)](#installation-automatique)
 2. [Installation manuelle](#installation-manuelr)
