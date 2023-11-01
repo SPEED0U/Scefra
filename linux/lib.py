@@ -67,7 +67,7 @@ def write_user_cfg(directory):
         print("Fichier user.cfg crée")
     
     if res.find(add)==-1:
-        res+="\n"+add
+        res+=add
         file.write_text(res)
         print("Fichier user.cfg modifié")
 
