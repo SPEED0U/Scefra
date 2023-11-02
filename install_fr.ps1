@@ -4,6 +4,7 @@ $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 
 $localization1 = Join-Path $ScriptDir "LIVE"
 $localization2 = Join-Path $ScriptDir "PTU"
+$localization3 = Join-Path $ScriptDir "TECH-PREVIEW"
 
 # Fonction pour afficher le texte art ASCII
 function Show-ASCII-Art {
@@ -42,10 +43,11 @@ function Show-Menu {
     Write-Host "Menu :"
     Write-Host "1. Traduire la version Live"
     Write-Host "2. Traduire la version PTU"
-    Write-Host "3. Recuperer le fichier de traductions depuis Internet"
-    Write-Host "4. Participer a la traduction"
-    Write-Host "5. Créer un raccourci"
-    Write-Host "6. Quitter"
+    Write-Host "3. Traduire la version TECH-PREVIEW"
+    Write-Host "4. Recuperer le fichier de traductions depuis Internet"
+    Write-Host "5. Participer a la traduction"
+    Write-Host "6. Créer un raccourci"
+    Write-Host "7. Quitter"
 }
 
 function Create-Shortcut {
@@ -144,6 +146,45 @@ while ($true) {
         }
         '3' {
             Clear-Host
+            Write-Host "Traduction de la TECH-PREVIEW."
+
+            # Vérification de la présence de la TECH-PREVIEW
+            Write-Host "Vérification de la présence de la TECH-PREVIEW"
+            if (-not (Test-Path -Path $localization3 -PathType Container)) {
+                Write-Host "Je ne trouve pas la TECH-PREVIEW. Veuillez vérifier que vous m'avez placé dans le répertoire StarCitizen."
+                Read-Host "Appuyez sur Entrée pour continuer..."
+            }
+            else {
+                # Création du fichier user.cfg dans la TECH-PREVIEW
+                Write-Host "Création du fichier user.cfg dans la TECH-PREVIEW"
+                Set-Content -Path "$localization3\user.cfg" -Value 'g_language = french_(france)'
+                Add-Content -Path "$localization3\user.cfg" -Value 'g_languageAudio = english'
+
+                # Création des répertoires nécessaires dans la TECH-PREVIEW"
+                Write-Host "Création des répertoires nécessaires dans la TECH-PREVIEW"
+                $techpreviewLocalizationDir = Join-Path $localization3 "data\Localization\french_(france)"
+                if (-not (Test-Path -Path $techpreviewLocalizationDir -PathType Container)) {
+                    New-Item -Path $techpreviewLocalizationDir -ItemType Directory -Force
+                }
+
+                # Téléchargement et copie du fichier de traduction dans la TECH-PREVIEW
+                Write-Host "Téléchargement et copie du fichier de traduction dans la TECH-PREVIEW"
+                $url = "https://raw.githubusercontent.com/SPEED0U/StarCitizenTranslations/main/french_(france)/global.ini"
+                $outputPath = Join-Path $techpreviewLocalizationDir "global.ini"
+
+                # Télécharge le contenu du fichier
+                $response = Invoke-WebRequest -Uri $url
+
+                # Assurez-vous que le contenu est en UTF-8 avec BOM et CRLF
+                $utf8Encoding = New-Object System.Text.UTF8Encoding $true
+                [System.IO.File]::WriteAllText($outputPath, $response.Content, $utf8Encoding)
+
+                Write-Host "Installation du dernier fichier de traduction dans la TECH-PREVIEW, terminé."
+                Read-Host "Appuyez sur Entrée pour continuer..."
+            }
+        }
+        '4' {
+            Clear-Host
             Write-Host "Vous avez choisi l'option 3."
         
             # Téléchargement du fichier de traduction depuis Internet
@@ -166,19 +207,19 @@ while ($true) {
             Write-Host "Récupération du dernier fichier de traduction."
             Read-Host "Appuyez sur Entrée pour continuer..."
         }
-        '4' {
+        '5' {
             Clear-Host
             Write-Host "Ouverture de la page internet"
             Start-Process "https://tradsc.nightriderz.world/fr/"
             Read-Host "Appuyez sur Entrée pour continuer..."
         }
-        '5' {
+        '6' {
             Clear-Host
             Write-Host "Création du raccourci sur le bureau : $shortcutFile"
             Create-Shortcut
             Read-Host "Appuyez sur Entrée pour continuer..."
         }
-        '6' {
+        '7' {
             exit
         }
         default {
