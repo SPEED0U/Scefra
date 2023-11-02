@@ -185,7 +185,7 @@ while ($true) {
         }
         '4' {
             Clear-Host
-            Write-Host "Vous avez choisi l'option 3."
+            Write-Host "Vous avez choisi l'option 4."
         
             # Téléchargement du fichier de traduction depuis Internet
             $url = "https://raw.githubusercontent.com/SPEED0U/StarCitizenTranslations/main/french_(france)/global.ini"
