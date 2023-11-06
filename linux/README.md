@@ -65,6 +65,7 @@ Vous devez installer pip et qt6 sur votre distribution
 Vous lancerez ensuite cette commande
 
 > python3 -m pip install PyQt6
+
 > python3 -m pip install configobj
 
 ## Utilisation
