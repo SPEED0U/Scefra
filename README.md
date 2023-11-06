@@ -10,7 +10,7 @@ Lien de notre serveur Discord: https://discord.gg/c3CSTa7SAF
 3. [Installation manuelle](#installation-manuelr)
 
 ### Installation automatique (avec l'app SCFR)
-> - Télécharger l'appli SCFR [ici](https://github.com/Skullyfox/SCFR/releases/download/v1.0.1/SCFR-Setup-1.0.1.exe).
+> - Télécharger l'installeur de l'appli SCFR [ici](https://github.com/Skullyfox/SCFR/releases), le fichier a télécharger est `SCFR.Setup.X.X.X.exe`.
 > - Executer `SCFR-Setup-1.0.1.exe` pour l'installer.
 > - Une fois installé l'appli va s'ouvrir et vous pourrez la retrouver dans votre menu démarrer.
 > - Suivez les instructions sur l'appli (tutoriel vidéo [ici](https://www.youtube.com/watch?v=BGkQTLGs9cw))
