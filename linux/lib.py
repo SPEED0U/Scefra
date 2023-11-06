@@ -3,6 +3,7 @@ import subprocess
 from enum import Enum
 import requests
 from pathlib import Path
+from configobj import ConfigObj
 
 def apply_translation(path):
     if not path.is_dir():
@@ -56,20 +57,10 @@ def get_lutris_games():
     return json.loads(subprocess.run(['lutris','-loj'],capture_output=True).stdout)
 
 def write_user_cfg(directory):
-    add="g_language = french_(france)"
     file=Path(directory,"user.cfg")
-    res=""
-
-    if file.is_file():
-        res=file.read_text()+"\n"
-    else:
-        file.touch()
-        print("Fichier user.cfg crée")
-    
-    if res.find(add)==-1:
-        res+=add
-        file.write_text(res)
-        print("Fichier user.cfg modifié")
+    config=ConfigObj(file.as_posix())
+    config["g_language"]="french_(france)"
+    config.write()
 
 class GUI:
     def __init__(self):
