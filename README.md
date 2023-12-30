@@ -1,4 +1,4 @@
-# StarCitizenFrenchTranslation
+# Scefra
 Ceci est un repository où vous pouvez trouver la traduction Française pour Star Citizen.
 La base de la traduction (Anglais vers Français) a été générée par l'API de Google Traduction et est corrigée par des contributeus.
 
