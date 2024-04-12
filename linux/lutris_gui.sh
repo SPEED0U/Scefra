@@ -69,7 +69,7 @@ class GUIQT6(GUI):
 
     def create_combobox(self,layout,datas):
         combobox=QComboBox()
-        combobox.addItems(GameMode.name_list())
+        combobox.addItems(datas)
         layout.addWidget(combobox)
         return combobox
 
