@@ -50,7 +50,7 @@ def select_game_mode():
     for mode in GameMode.list():
         display_game_mode(str(mode.value),mode.name)
     i=int(input("Sélectionnez un ID correspondant au mode de Star Citizen: "))
-    if i!=GameMode.LIVE.value and i!=GameMode.PTU.value and i!=GameMode.TECH_PREVIEW.value:
+    if i!=GameMode.LIVE.value and i!=GameMode.PTU.value and i!=GameMode.TECH_PREVIEW.value and i!=GameMode.EPTU.value:
         return select_game_mode()
     return i
 

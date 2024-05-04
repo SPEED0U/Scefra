@@ -42,6 +42,8 @@ def get_game_path(directory,mode):
             return Path(res,"PTU")
         case GameMode.TECH_PREVIEW.value:
             return Path(res,"TECH-PREVIEW")
+        case GameMode.EPTU.value:
+            return Path(res,"EPTU")
 
 class MyEnum(Enum):
     @classmethod
@@ -74,6 +76,7 @@ class GameMode(MyEnum):
     LIVE = 1
     PTU = 2
     TECH_PREVIEW = 3
+    EPTU = 4
 
 def lutris_flatpak_pkg():
     return "net.lutris.Lutris"
