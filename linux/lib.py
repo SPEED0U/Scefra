@@ -36,14 +36,10 @@ def get_translation():
 def get_game_path(directory,mode):
     res=Path(directory,"drive_c/Program Files/Roberts Space Industries/StarCitizen")
     match mode:
-        case GameMode.LIVE.value:
-            return Path(res,"LIVE")
-        case GameMode.PTU.value:
-            return Path(res,"PTU")
         case GameMode.TECH_PREVIEW.value:
             return Path(res,"TECH-PREVIEW")
-        case GameMode.EPTU.value:
-            return Path(res,"EPTU")
+        case _:
+            return Path(res,mode.name)
 
 class MyEnum(Enum):
     @classmethod
@@ -59,13 +55,13 @@ class MyEnum(Enum):
     def from_name(cls,name):
         for item in cls.list():
              if item.name==name:
-                return item.value
+                return item
         raise Exception('Incorrect Name')
     @classmethod
     def from_value(cls,value):
         for item in cls.list():
             if item.value==value:
-                return item.name
+                return item
         raise Exception('Incorrect Value')
 
 class LutrisVersion(MyEnum):
@@ -84,9 +80,9 @@ def lutris_flatpak_pkg():
 def get_lutris_versions():
     res=[]
     if has_system_lutris():
-        res.append('system')
+        res.append(LutrisVersion.system)
     if has_flatpak_lutris():
-        res.append('flatpak')
+        res.append(LutrisVersion.flatpak)
     return res
 
 def command_exists(command):
@@ -116,7 +112,7 @@ def get_system_lutris_games():
     return get_lutris_gamelist(['lutris'])
 
 def get_lutris_games(version):
-    if version=='flatpak':
+    if version==LutrisVersion.flatpak:
         if has_flatpak_lutris():
             return get_flatpak_lutris_games()
     else:
@@ -166,7 +162,7 @@ class GUI:
         raise Exception("Méthode non implémenté")
     
     def get_versions_name(self):
-        return list(map(lambda c: LutrisVersion.from_name(c),self.versions))
+        return list(map(lambda c: c.value,self.versions))
 
 class GUIErrors(Enum):
     NO_DIRECTORY = 1

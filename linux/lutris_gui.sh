@@ -24,9 +24,9 @@ class GUIQT6(GUI):
 
         layout.addWidget(QLabel("Jeux"))
 
-        self.gameTable=self.create_table(layout,self.get_datas_of_lutris_games("system"))
+        self.gameTable=self.create_table(layout,self.get_datas_of_lutris_games(LutrisVersion.system))
         self.gameTable.clicked.connect(self.select_line_of_table_game)
-        self.flatpakGames=self.create_table(layout,self.get_datas_of_lutris_games("flatpak"))
+        self.flatpakGames=self.create_table(layout,self.get_datas_of_lutris_games(LutrisVersion.flatpak))
         self.flatpakGames.clicked.connect(self.select_line_of_flatpak_games)
 
         if len(self.versions)==0:
@@ -34,7 +34,7 @@ class GUIQT6(GUI):
         elif len(self.versions)==1:
             self.versionLabel.hide()
             self.lutrisVersion.hide()
-            if self.versions[0]=="system":
+            if self.versions[0]==LutrisVersion.system:
                 self.flatpakGames.hide()
             else:
                 self.gameTable.hide()
@@ -75,7 +75,7 @@ class GUIQT6(GUI):
 
 
     def sync_table_game_to_table_version(self,index):
-        if self.get_version()=='flatpak':
+        if self.get_version()==LutrisVersion.flatpak:
             self.flatpakGames.show()
             self.gameTable.hide()
         else:
@@ -99,7 +99,7 @@ class GUIQT6(GUI):
             self.flatpakGames.selectRow(row)
 
     def get_directory(self):
-        if self.get_version()=='system':
+        if self.get_version()==LutrisVersion.system:
             index = self.gameTable.selectedIndexes()
 
             if len(index)==0:

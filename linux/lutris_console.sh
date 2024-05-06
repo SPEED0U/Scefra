@@ -18,16 +18,15 @@ def select_lutris_version():
 
     display_list("ID","Version","")
     i=1
-    versions=list(map(lambda c:LutrisVersion.from_name(c),versions))
     for version in versions:
-        display_list(str(i),version,"")
+        display_list(str(i),version.value,"")
 
     i=int(input("Entrez l'ID de la version de Lutris: "))
 
     if i>len(versions) or i<1:
         return select_lutris_version()
     
-    return LutrisVersion.from_value(versions[i-1])
+    return versions[i-1]
 
 def select_lutris_game(version):
     games=get_lutris_games(version)
@@ -50,9 +49,12 @@ def select_game_mode():
     for mode in GameMode.list():
         display_game_mode(str(mode.value),mode.name)
     i=int(input("Sélectionnez un ID correspondant au mode de Star Citizen: "))
-    if i!=GameMode.LIVE.value and i!=GameMode.PTU.value and i!=GameMode.TECH_PREVIEW.value and i!=GameMode.EPTU.value:
+    try:
+        res=GameMode.from_value(i)
+        return res
+    except e:
         return select_game_mode()
-    return i
+
 
 version=select_lutris_version()
 game=select_lutris_game(version)
