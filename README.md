@@ -10,7 +10,7 @@ Lien de notre serveur Discord: https://discord.gg/c3CSTa7SAF
 3. [Contribuer a la correction](#contribuer)
 
 ### Installation automatique
-- Télécharger l'installeur de l'appli SCFR [ici](https://www.microsoft.com/store/productId/9MWD1VN65WCN?ocid=pdpshare).
+- Télécharger l'installeur de l'appli MultiTool [ici](https://www.microsoft.com/store/productId/9MWD1VN65WCN?ocid=pdpshare).
 - Executer `Multitool - StarCitizen Toolbox Installer.exe` pour l'installer.
 - Une fois installé l'appli va s'ouvrir et vous pourrez la retrouver dans votre menu démarrer.
 - Suivez les instructions sur l'appli, allez dans l'onglet traduction et vos installations seront listées ici.
