@@ -15,15 +15,6 @@ Lien de notre serveur Discord: https://discord.gg/c3CSTa7SAF
 - Une fois installé l'appli va s'ouvrir et vous pourrez la retrouver dans votre menu démarrer.
 - Suivez les instructions sur l'appli, allez dans l'onglet traduction et vos installations seront listées ici.
 
-### Installation manuelle
-- Télécharger les fichiers du répertoire avec le bouton vert `Code` en haut à droite.
-- Extraire le language désiré dans le dossier `C:\PATH\TO\GAME\Robert Space Industries\StarCitizen\LIVE\data\Localization`
-- Créer un fichier `user.cfg` (activé les extensions des fichiers dans les paramètres de Windows) dans le dossier `C:\PATH\TO\GAME\Robert Space Industries\StarCitizen\LIVE` si vous en avez pas déjà un.
-- Dans le fichier `user.cfg` ajouter une ligne `g_language=` puis ajouter le language désiré après le `=`, exemple : `g_language=french_(france)`
-- Enregistrer le fichier puis vous pourrez démarrer le jeu.
-
-:warning: - **Avec cette méthode il se peut que la traduction ne fonctionne pas, pour résoudre le soucis il faut réencoder le fichier `global.ini` en `UTF8 with BOM` avec un logiciel type Notepad++.**
-
 ### Contribuer
 - Aller sur [pontoon](https://pontoon.scefra.fr) et s'enregistrer.
 - Ensuite aller sur [la page du projet](https://pontoon.scefra.fr/fr/scefra/locales/fr/global.ini/).
@@ -34,3 +25,17 @@ Lien de notre serveur Discord: https://discord.gg/c3CSTa7SAF
 - Les lettres avec des accents comme `é`,`à`,`ö` etc. soit n'apparaissent pas ou elles sont affichées en minuscule.
 
 Un grand merci à [Onivoid](https://github.com/Skullyfox) pour son travail sur l'appli [MultiTool](https://github.com/Skullyfox/SCFR) !
+
+
+## License
+
+This translation file is licensed under CC BY-NC-ND 4.0.
+
+You may share the original, unmodified version with attribution.
+
+You may not:
+- modify and redistribute it;
+- use it commercially;
+- publish unofficial modified versions.
+
+Credits: SPEED0U
